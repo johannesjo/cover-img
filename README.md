@@ -1,6 +1,9 @@
 # cover-img
 
-Replaces images with background-size: cover divs.
+Automatically calculates image-width and height of an image to always cover its parent-size while keeping the image-proportions.
+
+It uses a variation of John Hahns debouncing function to listen the window-resize event
+ http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
 
 ## Getting Started
 
@@ -32,11 +35,6 @@ Or use it via the data-attribute
 </div>
 ```
 
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
 
 ## Release History
-_(Nothing yet)_
+Version 1.0 - well it works
