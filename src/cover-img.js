@@ -8,7 +8,6 @@
 
 (function ($, sr)
 {
-
   // debouncing function from John Hann
   // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
   var debounce = function (func, threshold, execAsap)
@@ -21,19 +20,20 @@
 
       function delayed()
       {
-        if (!execAsap)
+        if (!execAsap) {
           func.apply(obj, args);
+        }
         timeout = null;
-      };
+      }
 
-      if (timeout)
+      if (timeout) {
         clearTimeout(timeout);
-      else if (execAsap)
+      } else if (execAsap) {
         func.apply(obj, args);
-
+      }
       timeout = setTimeout(delayed, threshold || 100);
     };
-  }
+  };
   // smartresize
   jQuery.fn[sr] = function (fn)
   {
@@ -145,10 +145,10 @@
   // Collection method.
   $.fn.coverImg = function (options)
   {
-    return this.each(function (i)
+    return this.each(function ()
     {
       var options = $.extend({}, CoverImg.DEFAULTS, options);
-      var coverImg = new CoverImg(this, options);
+      new CoverImg(this, options);
     });
   };
 

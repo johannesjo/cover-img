@@ -1,5 +1,6 @@
 {
   "node": true,
+  "jquery": true,
   "browser": true,
   "esnext": true,
   "bitwise": true,
