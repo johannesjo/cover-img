@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .img-container {
+      width:  200px;
+      height: 500px;
+      border: 1px solid red;
+      margin: auto;
+    }
+    img{
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <h4>700*500 img in 100%*300</h4>
+
+  <div class="img-container" style="width:100%; height: 300px;">
+    <img class="cover-img" src="http://placekitten.com/700/500">
+  </div>
+  <h4>original</h4>
+  <img  src="http://placekitten.com/700/500">
+</div>
+
+
+
+<div>
+  <h4>200*350 img in 200 *500</h4>
+
+  <div class="img-container">
+    <img data-cover-img src="http://placekitten.com/200/350">
+  </div>
+  <h4>original</h4>
+  <img src="http://placekitten.com/200/350">
+</div>
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="src/cover-img.js"></script>
+<script>
+  $('.cover-img').coverImg();
+</script>
+
+</body>
+</html>

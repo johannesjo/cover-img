@@ -89,6 +89,11 @@ module.exports = function (grunt) {
           port: 9000
         }
       }
+    },
+    open : {
+      dev : {
+        path: 'http://127.0.0.1:9000/example.html'
+      }
     }
   });
 
@@ -98,6 +103,6 @@ module.exports = function (grunt) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });
-  grunt.registerTask('serve', ['connect', 'watch']);
+  grunt.registerTask('serve', ['connect','open', 'watch']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };

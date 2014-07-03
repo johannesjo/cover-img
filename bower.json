@@ -1,6 +1,6 @@
 {
   "name": "cover-img",
-  "version": "0.2",
+  "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
     "qunit": "~1.12.0",
