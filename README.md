@@ -2,6 +2,8 @@
 
 Automatically calculates image-width and height of an image to always cover its parent-size while keeping the image-proportions.
 
+Works inside block-elements, inline-block-elements and even table-cells.
+
 It uses a variation of John Hahns debouncing function to listen the window-resize event
  http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
 

@@ -91,10 +91,22 @@
     }
   };
 
+  CoverImg.prototype.createWrapper = function ()
+  {
+    this.$parent.css('position', 'relative');
+    this.$el.wrap('<div style="position: absolute; width: 100%; height: 100%; top: 0; left:0;"></div>');
+  };
+
   CoverImg.prototype.setParentStyles = function ()
   {
     var cssPosition = this.$parent.css('position'),
-      cssOverflow = this.$parent.css('overflow');
+      cssOverflow = this.$parent.css('overflow'),
+      cssDisplay = this.$parent.css('display');
+
+    if (cssDisplay !== 'block' && cssDisplay !== 'inline-block') {
+      this.createWrapper();
+    }
+
     if (cssPosition !== 'relative' && cssPosition !== 'absolute') {
       this.$parent.css('position', 'relative');
     }

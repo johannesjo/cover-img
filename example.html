@@ -10,8 +10,13 @@
       border: 1px solid red;
       margin: auto;
     }
-    img{
+
+    img {
       max-width: 100%;
+    }
+
+    td {
+      border: 1px solid black;
     }
   </style>
 </head>
@@ -24,9 +29,8 @@
     <img class="cover-img" src="http://placekitten.com/700/500">
   </div>
   <h4>original</h4>
-  <img  src="http://placekitten.com/700/500">
+  <img src="http://placekitten.com/700/500">
 </div>
-
 
 
 <div>
@@ -39,6 +43,29 @@
   <img src="http://placekitten.com/200/350">
 </div>
 
+<div>
+  <h2>Fixed Table</h2>
+  <p>(as it might be used for layout tricks)</p>
+  <h4>200*350 img in 500 *500</h4>
+
+  <table>
+    <tr>
+      <td>blablalbalblalblablal</td>
+      <td style="width: 500px; height: 500px;">
+        <img data-cover-img src="http://placekitten.com/200/350">
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>blablalbalblalblablal</td>
+      <td style="width: 500px; height: 500px;">
+        <img src="http://placekitten.com/200/350">
+      </td>
+    </tr>
+  </table>
+</div>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="src/cover-img.js"></script>
