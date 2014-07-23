@@ -57,7 +57,10 @@
 
       this.setStyles();
       this.setParentStyles();
+
+      // prevent too much visible resizing
       this.$el.width('100%');
+      this.$el.height('100%');
 
       // IF image
       $("<img/>") // Make in memory copy of image to avoid css issues
@@ -75,6 +78,8 @@
       });
 
     };
+
+
 
     CoverImg.prototype.setStyles = function ()
     {
